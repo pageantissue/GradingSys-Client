@@ -1,0 +1,1 @@
+g++ -o "/home/g202130190273/projects/GradingSys-Client/bin/x64/Debug/GradingSys-Client.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/home/g202130190273/projects/GradingSys-Client/obj/x64/Debug/client.o"
