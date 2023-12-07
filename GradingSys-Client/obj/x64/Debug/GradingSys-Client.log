@@ -1,47 +1,18 @@
-﻿生成启动时间为 2023/12/5 15:48:02。
+﻿生成启动时间为 2023/12/7 16:07:10。
 日志记录详细程度设置为: Normal。     1>项目“D:\github_proj_f\GradingSys-Client\GradingSys-Client\GradingSys-Client.vcxproj”在节点 2 上(Build 个目标)。
-     1>PrepareForBuild:
-         正在创建目录“D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\x64\Debug\”。
-         正在创建目录“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\x64\Debug\GradingS.ddd8df52.tlog\”。
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          正在创建“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\x64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        _ValidateSources:
          正在验证源
-       _CopySources:
-         正在将源远程复制到“taishan3.ebim.com”
-         正在将文件“D:\github_proj_f\Client\client.cpp”复制到“/home/g202130190273/projects/GradingSys-Client/Client/client.cpp”
-         正在将文件“D:\github_proj_f\Client\client.h”复制到“/home/g202130190273/projects/GradingSys-Client/Client/client.h”
        _ValidateCompatibleRemoteArchitectures:
          正在验证体系结构
-       _ValidateValidArchitecture:
-         正在验证体系结构
-     1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Application Type\Linux\1.0\Linux.targets(202,5): warning : 当前项目体系结构“x64”不兼容远程系统体系结构“ARM64”(“ARM64”)。请在 Configuration Manager 中将项目体系结构切换为“ARM64”。如果正在交叉编译，可以忽略此警告。
-       ClCompile:
-         正在启动远程生成
-         正在编译源:
-         正在调用“g++”
-         g++ -c -x c++ "/home/g202130190273/projects/GradingSys-Client/Client/client.cpp" -g2 -gdwarf-2 -o "/home/g202130190273/projects/GradingSys-Client/obj/x64/Debug/client.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
-         client.cpp
-         已完成编译“/home/g202130190273/projects/GradingSys-Client/Client/client.cpp”
-       Link:
-         正在链接对象
-         正在调用“ld”
-         g++ -o "/home/g202130190273/projects/GradingSys-Client/bin/x64/Debug/GradingSys-Client.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/home/g202130190273/projects/GradingSys-Client/obj/x64/Debug/client.o"
-         已完成链接，输出文件名:“/home/g202130190273/projects/GradingSys-Client/bin/x64/Debug/GradingSys-Client.out”
-         正在将文件“/home/g202130190273/projects/GradingSys-Client/bin/x64/Debug/GradingSys-Client.out”复制到“D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\x64\Debug\GradingSys-Client.out”
-         GradingSys-Client.vcxproj -> D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\x64\Debug\GradingSys-Client.out
        FinalizeBuildStatus:
          正在删除文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\x64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”。
          正在对“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\x64\Debug\GradingS.ddd8df52.tlog\GradingSys-Client.lastbuildstate”执行 Touch 任务。
      1>已完成生成项目“D:\github_proj_f\GradingSys-Client\GradingSys-Client\GradingSys-Client.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
-
-       “D:\github_proj_f\GradingSys-Client\GradingSys-Client\GradingSys-Client.vcxproj”(Build 目标) (1) ->
-       (_ValidateValidArchitecture 目标) -> 
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Application Type\Linux\1.0\Linux.targets(202,5): warning : 当前项目体系结构“x64”不兼容远程系统体系结构“ARM64”(“ARM64”)。请在 Configuration Manager 中将项目体系结构切换为“ARM64”。如果正在交叉编译，可以忽略此警告。
-
-    1 个警告
+    0 个警告
     0 个错误
 
-已用时间 00:00:22.75
+已用时间 00:00:00.13
