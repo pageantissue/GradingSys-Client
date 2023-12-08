@@ -7,7 +7,7 @@ int main()
     // 设置服务器地址信息
     sockaddr_in serverAddress;
     serverAddress.sin_family = AF_INET;
-    serverAddress.sin_port = htons(12345);  // 服务器监听端口
+    serverAddress.sin_port = htons(SERVER_PORT);  // 服务器监听端口
     serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");  // 服务器 IP 地址
 
     // 连接到服务器
@@ -27,24 +27,28 @@ int main()
             printf("Nothing received or failures ocurred!\n");
             break;
         }
-        //printf("Received message: %s\n", recvbuf);
+        if (strcmp(recvbuf, "help") == 0)
+        {
+            help();
+            continue;
+        }
         printf(recvbuf);
 
-        // 判断接收到的信息是否包含换行符
         if (strchr(recvbuf, '\n') != NULL)
+        {
             // 如果包含换行符，则认为是无需回复的信息，不需要用户输入，跳过后续逻辑
             continue;
+        }
 
-        // 用户输入并发送给服务器端
         fgets(sendbuf, sizeof(sendbuf), stdin);
 
-        // 发送用户输入到服务器端
-        send(client_sock, sendbuf, strlen(sendbuf), 0);
-
         // 输入exit退出系统
-        if (strcmp(sendbuf, "exit\n") == 0) {
+        if (strcmp(sendbuf, "exit\n") == 0)
             break;
-        }
+
+        sendbuf[strlen(sendbuf) - 1] = '\0';
+        // 发送用户命令到服务器端
+        send(client_sock, sendbuf, strlen(sendbuf), 0);
     }
     close(client_sock);//关闭客户端socket
     return 0;
