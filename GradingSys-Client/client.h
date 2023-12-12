@@ -15,7 +15,7 @@
 using namespace std;
 
 void help() {
-	cout.setf(ios::left); //设置对齐方式为left 
+	cout.setf(ios::left); // 设置对齐方式为left
 	cout.width(30); //设置宽度，不足用空格填充 
 	//cout << setiosflags(ios::left);
 	cout << "ls" << "Display the current directory listing" << endl;	//列出当前目录清单

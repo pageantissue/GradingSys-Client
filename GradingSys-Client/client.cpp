@@ -20,7 +20,7 @@ int main()
     char recvbuf[BUF_SIZE];
     while (1)
     {
-        memset(recvbuf, 0, sizeof(recvbuf));
+        memset(recvbuf, '\0', sizeof(recvbuf));
         // 接收服务器端发送的信息
         ssize_t len = recv(client_sock, recvbuf, sizeof(recvbuf), 0);
         if (len <= 0) {
@@ -41,11 +41,9 @@ int main()
         }
 
         fgets(sendbuf, sizeof(sendbuf), stdin);
-
         // 输入exit退出系统
         if (strcmp(sendbuf, "exit\n") == 0)
             break;
-
         sendbuf[strlen(sendbuf) - 1] = '\0';
         // 发送用户命令到服务器端
         send(client_sock, sendbuf, strlen(sendbuf), 0);
