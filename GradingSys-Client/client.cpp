@@ -32,9 +32,9 @@ int main()
         fflush(stdout);
         char new_buffer[strlen(recvbuf)];
         strcpy(new_buffer, recvbuf);
-        if (new_buffer[strlen(new_buffer) - 1] == '\n')
+        if ((new_buffer[strlen(new_buffer) - 1] == '\n') || (new_buffer[strlen(new_buffer) - 1] == '\t'))
         {
-            // if the last char of message recieved is \n we consider it as plain output text which is no need of client's response
+            // if the last char of message recieved is \n or \t we consider it as plain output text which is no need of client's response
             continue;
         }
         fgets(sendbuf, sizeof(sendbuf), stdin);
