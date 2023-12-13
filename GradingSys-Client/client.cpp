@@ -9,7 +9,6 @@ int main()
     //serverAddress.sin_addr.s_addr = inet_addr("10.37.240.154");
     serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-
     if (connect(client_sock, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) == -1) {
         perror("Connection failed");
         close(client_sock);
