@@ -30,17 +30,17 @@ int main()
         }
         printf(recvbuf);
         fflush(stdout);
-        fflush(stdin);
-        if (strchr(recvbuf, '\n') != NULL)
+        char new_buffer[strlen(recvbuf)];
+        strcpy(new_buffer, recvbuf);
+        if (new_buffer[strlen(new_buffer) - 1] == '\n')
         {
+            // if the last char of message recieved is \n we consider it as plain output text which is no need of client's response
             continue;
         }
-        printf("准备接收用户输入\n");
         fgets(sendbuf, sizeof(sendbuf), stdin);
-        printf(sendbuf);
         if (strcmp(sendbuf, "exit\n") == 0)
             break;
-        //sendbuf[strlen(sendbuf) - 1] = '\0';
+        sendbuf[strlen(sendbuf) - 1] = '\0';
         send(client_sock, sendbuf, strlen(sendbuf), 0);
     }
     close(client_sock);
