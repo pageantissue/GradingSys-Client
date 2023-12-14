@@ -14,6 +14,13 @@
 #define BUF_SIZE 1024
 using namespace std;
 
+void help1() { //学生的命令提示
+
+}
+
+void help2() { //教师的命令提示
+
+}
 void help() {
 	cout.setf(ios::left);
 	cout.width(30);
