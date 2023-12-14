@@ -1,13 +1,13 @@
-﻿生成启动时间为 2023/12/14 1:57:52。
+﻿生成启动时间为 2023/12/15 6:13:35。
 日志记录详细程度设置为: Normal。     1>项目“D:\github_proj_f\GradingSys-Client\GradingSys-Client\GradingSys-Client.vcxproj”在节点 2 上(Build 个目标)。
      1>InitializeBuildStatus:
-         正在对“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\ARM64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”执行 Touch 任务。
+         正在创建“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\ARM64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        _ValidateSources:
          正在验证源
        _CopySources:
          正在将源远程复制到“taishan3.ebim.com”
-         正在将文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.cpp”复制到“/home/g202130190273/projects/GradingSys-Client/client.cpp”
-         正在跳过“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.h”，因为它已是最新版本。
+         正在跳过“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.cpp”，因为它已是最新版本。
+         正在将文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.h”复制到“/home/g202130080215/projects/GradingSys-Client/client.h”
        _ValidateCompatibleRemoteArchitectures:
          正在验证体系结构
        _ValidateValidArchitecture:
@@ -17,15 +17,15 @@
          正在启动远程生成
          正在编译源:
          正在调用“g++”
-         g++ -c -x c++ "/home/g202130190273/projects/GradingSys-Client/client.cpp" -g2 -gdwarf-2 -o "/home/g202130190273/projects/GradingSys-Client/obj/ARM64/Debug/client.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         g++ -c -x c++ "/home/g202130080215/projects/GradingSys-Client/client.cpp" -g2 -gdwarf-2 -o "/home/g202130080215/projects/GradingSys-Client/obj/ARM64/Debug/client.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
          client.cpp
-         已完成编译“/home/g202130190273/projects/GradingSys-Client/client.cpp”
+         已完成编译“/home/g202130080215/projects/GradingSys-Client/client.cpp”
        Link:
          正在链接对象
          正在调用“ld”
-         g++ -o "/home/g202130190273/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/home/g202130190273/projects/GradingSys-Client/obj/ARM64/Debug/client.o"
-         已完成链接，输出文件名:“/home/g202130190273/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out”
-         正在将文件“/home/g202130190273/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out”复制到“D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\ARM64\Debug\GradingSys-Client.out”
+         g++ -o "/home/g202130080215/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/home/g202130080215/projects/GradingSys-Client/obj/ARM64/Debug/client.o"
+         已完成链接，输出文件名:“/home/g202130080215/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out”
+         正在将文件“/home/g202130080215/projects/GradingSys-Client/bin/ARM64/Debug/GradingSys-Client.out”复制到“D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\ARM64\Debug\GradingSys-Client.out”
          GradingSys-Client.vcxproj -> D:\github_proj_f\GradingSys-Client\GradingSys-Client\bin\ARM64\Debug\GradingSys-Client.out
        FinalizeBuildStatus:
          正在删除文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\ARM64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”。
@@ -36,4 +36,4 @@
     0 个警告
     0 个错误
 
-已用时间 00:00:17.71
+已用时间 00:00:15.62
