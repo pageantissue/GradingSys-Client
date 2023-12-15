@@ -6,8 +6,8 @@ int main()
     sockaddr_in serverAddress;
     serverAddress.sin_family = AF_INET;
     serverAddress.sin_port = htons(SERVER_PORT);
-    serverAddress.sin_addr.s_addr = inet_addr("10.37.240.154");
-    //serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");
+    //serverAddress.sin_addr.s_addr = inet_addr("10.37.240.154");
+    serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     if (connect(client_sock, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) == -1) {
         perror("Connection failed");
@@ -50,21 +50,38 @@ int main()
         }
         else if (new_buffer[strlen(new_buffer) - 1] == '\r')
         {
-            printf("%s\nYour content will be saved from the new line. Stop input by enterring STOP and press ENTER!\n", recvbuf);
+            printf("%sYour content will be saved from the new line. Stop input by enterring STOP and press ENTER!\n\n", recvbuf);
             fflush(stdout);
-            // 使用fgets来逐行接收用户输入
-            while (fgets(sendbuf, sizeof(sendbuf), stdin) != nullptr)
-                if (strcmp(sendbuf, "STOP\n") == 0) 
+            char eachline[1024]; memset(eachline, '\0', 1024);
+            char result[1024]; memset(result, '\0', 1024);
+            while (1)
+            {
+                std::cin.getline(eachline, 1024);
+                // 检查输入是否包含 "STOP"
+                if (strstr(eachline, "STOP") != nullptr) {
                     break;
-              
+                }
+                strcat(result, eachline);
+                strcat(result, "\n"); // 添加换行符，以便区分每一行
+            }
+            memset(sendbuf, '\0', sizeof(sendbuf));
+            strcpy(sendbuf, result);
+            sendbuf[strlen(sendbuf) - 1] = '\0'; //strip \n
+            send(client_sock, sendbuf, strlen(sendbuf), 0);
         }
-        printf(recvbuf);
-        fflush(stdout);
-        fgets(sendbuf, sizeof(sendbuf), stdin);
-        if (strcmp(sendbuf, "exit\n") == 0)
-            break;
-        sendbuf[strlen(sendbuf) - 1] = '\0'; //strip \n
-        send(client_sock, sendbuf, strlen(sendbuf), 0);
+        else
+        {
+            printf(recvbuf);
+            fflush(stdout);
+            fgets(sendbuf, sizeof(sendbuf), stdin);
+            if (strcmp(sendbuf, "exit\n") == 0)
+            {
+                cout << "Exit Grading System. Bye!\n";
+                break;
+            }
+            sendbuf[strlen(sendbuf) - 1] = '\0'; //strip \n
+            send(client_sock, sendbuf, strlen(sendbuf), 0);
+        }
     }
     close(client_sock);
     return 0;

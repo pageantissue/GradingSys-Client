@@ -1,4 +1,4 @@
-﻿生成启动时间为 2023/12/15 6:13:35。
+﻿生成启动时间为 2023/12/15 12:57:42。
 日志记录详细程度设置为: Normal。     1>项目“D:\github_proj_f\GradingSys-Client\GradingSys-Client\GradingSys-Client.vcxproj”在节点 2 上(Build 个目标)。
      1>InitializeBuildStatus:
          正在创建“D:\github_proj_f\GradingSys-Client\GradingSys-Client\obj\ARM64\Debug\GradingS.ddd8df52.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -6,8 +6,8 @@
          正在验证源
        _CopySources:
          正在将源远程复制到“taishan3.ebim.com”
-         正在跳过“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.cpp”，因为它已是最新版本。
-         正在将文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.h”复制到“/home/g202130080215/projects/GradingSys-Client/client.h”
+         正在将文件“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.cpp”复制到“/home/g202130080215/projects/GradingSys-Client/client.cpp”
+         正在跳过“D:\github_proj_f\GradingSys-Client\GradingSys-Client\client.h”，因为它已是最新版本。
        _ValidateCompatibleRemoteArchitectures:
          正在验证体系结构
        _ValidateValidArchitecture:
@@ -36,4 +36,4 @@
     0 个警告
     0 个错误
 
-已用时间 00:00:15.62
+已用时间 00:01:09.43

@@ -17,19 +17,19 @@ using namespace std;
 void help1() { //学生的命令提示
 	cout.setf(ios::left); //设置对齐方式为left 
 	cout.width(50); //设置宽度，不足用空格填充 
-	cout << "checkHw [courseName] [taskName]" << "View the content of the corresponding assignment " << endl;  //查看作业内容
+	cout << "check_hw [courseName] [taskName]" << "View the content of the corresponding assignment " << endl;  //查看作业内容
 	cout.width(50);
-	cout << "submit [courseName] [taskName]" << "Submit an assignment" << endl;  //提交作业
+	cout << "submit_hw_to [courseName] [taskName]" << "Submit an assignment" << endl;  //提交作业
 	cout.width(50);
-	cout << "checkScore [courseName] [taskName]" << "View the score of the corresponding assignment " << endl;  //查看作业分数
+	cout << "check_hw_score [courseName] [taskName]" << "View the score of the corresponding assignment " << endl;  //查看作业分数
 }
 
 void help2() { //教师的命令提示
 	cout.setf(ios::left); //设置对齐方式为left 
 	cout.width(50); //设置宽度，不足用空格填充 
-	cout << "publish [courseName] [taskName]" << "Publish a task" << endl;  //布置作业
+	cout << "publish_task [courseName] [taskName]" << "Publish a task" << endl;  //布置作业
 	cout.width(50);
-	cout << "judge [courseName] [taskName]" << "Judging homework" << endl;  //给作业打分
+	cout << "judge_hw [courseName] [taskName]" << "Judging homework" << endl;  //给作业打分
 }
 
 void help() { // root的命令提示
