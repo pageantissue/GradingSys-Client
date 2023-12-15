@@ -17,7 +17,7 @@ using namespace std;
 void help1() { //学生的命令提示
 	cout.setf(ios::left); //设置对齐方式为left 
 	cout.width(50); //设置宽度，不足用空格填充 
-	cout << "check_hw [courseName] [taskName]" << "View the content of the corresponding assignment " << endl;  //查看作业内容
+	cout << "check_hw_content [courseName] [taskName]" << "View the content of the corresponding assignment " << endl;  //查看作业内容
 	cout.width(50);
 	cout << "submit_hw_to [courseName] [taskName]" << "Submit an assignment" << endl;  //提交作业
 	cout.width(50);
