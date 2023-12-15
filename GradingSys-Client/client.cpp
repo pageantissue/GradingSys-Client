@@ -66,8 +66,8 @@ int main()
             }
             memset(sendbuf, '\0', sizeof(sendbuf));
             strcpy(sendbuf, result);
-            sendbuf[strlen(sendbuf) - 1] = '\0'; //strip \n
             send(client_sock, sendbuf, strlen(sendbuf), 0);
+            continue;
         }
         else
         {
